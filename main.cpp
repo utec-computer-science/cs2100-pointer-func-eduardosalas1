@@ -2,8 +2,8 @@
 using namespace std;
 
 template <class T>
-void print_array(T *array){
-    for(auto i : *array){
+void print_array(T &array){
+    for(auto i : array){
         cout<<i<<endl;
     }
 }
@@ -78,9 +78,7 @@ int main(){
     _bubblesort_(_array_2,_b_float_,5);
     //print_array(_array_2);
     _bubblesort_(_array_3,_b_double_,5);
-    for(auto i : _array_3){
-        cout<<i<<endl;
-    }
+    print_array(_array_3);
     _bubblesort_(_array_4,_b_char_,6);
     //print_array(_array_4);
 
